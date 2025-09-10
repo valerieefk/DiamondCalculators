@@ -12,11 +12,11 @@ cwd = os.getcwd()
 ##############################################
 #Get elemental data in and properly formed
 ##############################################
-carbon = np.loadtxt((cwd + "/scratch/carbon.txt"), dtype = float,comments ="#",)
-pt = np.loadtxt((cwd + "/scratch/pt.txt"), dtype = float,comments ="#",)
-al = np.loadtxt((cwd + "/scratch/al.txt"), dtype = float,comments ="#",)
-spectrum = np.loadtxt((cwd +"/scratch/CLS_WB_Spec_With_Filter.txt"), dtype = float, skiprows = 5,)
-spectrum2 = np.loadtxt((cwd +"/scratch/CLS_WB_Spec_WO_Filter.txt"), dtype = float, skiprows = 100,)
+carbon = np.loadtxt((cwd + "/sourceData/carbon.txt"), dtype = float,comments ="#",)
+pt = np.loadtxt((cwd + "/sourceData/pt.txt"), dtype = float,comments ="#",)
+al = np.loadtxt((cwd + "/sourceData/al.txt"), dtype = float,comments ="#",)
+spectrum = np.loadtxt((cwd +"/sourceData/CLS_WB_Spec_With_Filter.txt"), dtype = float, skiprows = 5,)
+spectrum2 = np.loadtxt((cwd +"/sourceData/CLS_WB_Spec_WO_Filter.txt"), dtype = float, skiprows = 100,)
 ###############################################
 # Constants
 ###############################################
@@ -96,8 +96,8 @@ for index in range(len(spectrum)):
     singePoint = device_perf_pt(40,30,(spectrum[index,0]),spectrum[index,1])
     totalHeat[index,0] = singePoint[1]
     totalCurrent[index,0] = singePoint[0]
-# np.savetxt(cwd + "/Scratch/heat.txt",totalHeat)
-# np.savetxt(cwd + "/Scratch/current.txt",totalCurrent)
+# np.savetxt(cwd + "/sourceData/heat.txt",totalHeat)
+# np.savetxt(cwd + "/sourceData/current.txt",totalCurrent)
 print("break")
 
 print ("Total Current is {:e}.\n Total Heat is {:e}".format(np.sum(totalCurrent),np.sum(totalHeat)))

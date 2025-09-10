@@ -52,6 +52,9 @@ def MAdevice_perf_al (diamon_thick, metal_thick,energy, flux):
     return current , heatLoad, absAlall, absC  
 
 def MAdevice_perf_pt (diamon_thick, metal_thick,energy, flux):
+    """ Returns current, heatload, absPtAll, absC
+    """
+    
     bias = 10 # bias on dimaond
     coefC = np.interp((energy*ToMev), carbon[:,0], carbon[:,2])
     coefPt = np.interp((energy*ToMev), pt[:,0], pt[:,2])

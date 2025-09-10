@@ -28,7 +28,7 @@ coulPerElec =  6.28e18  #elec per s for amp
 micro_cm = 1e-4 # microns to cm conversion
 nano_cm = 1e-7 # nm to cm conversion
 kToMev= 1e-3
-freeCarrier = 13.2 #energy to make electorn whole pairs in diamond
+freeCarrier = 13.2 #energy to make electron whole pairs in diamond
 ################################################
 
 diamondThick = 45 * micro_cm    # thickness in microns 
